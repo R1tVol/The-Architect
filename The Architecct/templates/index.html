@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R1TVOL</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #ff0000;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2em;
+            flex: 1;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 0.5em;
+        }
+
+        input, textarea {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 0.7em;
+            border: none;
+            background-color: #db1717;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO THE MOST EXCITING SHOW EVER EXISTS!</h1>
+        <nav>
+            <ul>
+                <li><a href="#forum">Get Ready to meet with R1tVol himself</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="abtme">
+            <h2>About me</h2>
+            <p>Everthing about R1tVol, A.K.A One Man Tech Army.</p>
+        </section>
+
+
+        <section id="stay-tuned">
+            <h2>STAY TUNED FOLKS, THE SHOW IS ABOUT TO START!</h2>
+            <div class="TIMER EKLE" data-elfsight-app-lazy></div>
+        </section>
+
+        <section id="forum">
+            <h2>Forum</h2>
+            <p>Contact us:</p>
+            <form id="contact-form" method="POST" action="{{ url_for('cave') }}">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="gmail">Gmail:</label>
+                <input type="email" id="gmail" name="gmail"><br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
+                <label for="code">Enter code, -if you don't any call and get one from R1tVol himself:- </label>
+                <input type="text" id="code" name="code"><br><br>
+                <input type="submit" value="Kayıt Ol">
+            </form>
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; All rights are reserved by R1tVol 2024 ©.</p>
+    </footer>
+
+    <!-- <script>
+        const form = document.querySelector('#contact-form');
+        const codeInput = document.querySelector('#code');
+        const resultDiv = document.querySelector('#result');
+
+        form.addEventListener('submit', (e) => {
+            const code = codeInput.value;
+            if (code !== '17340') {
+                e.preventDefault();
+                resultDiv.innerHTML = 'Invalid code';
+            }
+        });
+    </script> -->
+</body>
+</html>
+
